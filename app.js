@@ -26,7 +26,7 @@ gameInterval(function () {
     ufo.scale.x = 0.1;
     ufo.scale.y = 0.1;
     app.stage.addChild(ufo);
-    ufolist.push(ufo); 
+    ufolist.push(ufo); // wenn ich ein neues Objekt erstelle, kann ich das dieser Liste hierdurch hinzufügen
     // ufo nach unten fliegen lassen
     flyDown(ufo, 1);// die 1 steht für die Geschwindigkeit
     // wenn die Rakete mit dem Ufo kollidiert ist das Spiel zuende
@@ -57,10 +57,12 @@ function spaceKeyPressed(){
     flyUp(bullet); // Kugel nach oben fliegen lassen
     app.stage.addChild(bullet);
 
+    // Funktion, die aufgerufen wird und wo die Kugel und das Ufo rausgegeben werden
+    // wenn die Kugel mit dem Ufo kollidiert verschwindet das Ufo
     waitForCollision(bullet, ufolist).then(function ([bullet, ufo]) {
-        app.stage.removeChild(ufolist);
-        app.stage.removeChild(bullet); // bei Kollision Kugel entfernen
-        stopGame ();
+        app.stage.removeChild(ufo);
+        app.stage.removeChild(bullet); 
+    
     });
 }
 
