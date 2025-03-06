@@ -25,7 +25,7 @@ gameInterval(function () {
     ufo.y = 25;
     ufo.scale.x = 0.1;
     ufo.scale.y = 0.1;
-    app.stage.addChild(ufo);
+    app.stage.addChild(ufo); // das Ufo wird sichtbar ( Bild von Ufo wird auf der Leinfand/stage hinzugefügt)
     ufolist.push(ufo); // wenn ich ein neues Objekt erstelle, kann ich das dieser Liste hierdurch hinzufügen
     // ufo nach unten fliegen lassen
     flyDown(ufo, 1);// die 1 steht für die Geschwindigkeit
