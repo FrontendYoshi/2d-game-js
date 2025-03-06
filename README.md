@@ -1,2 +1,1 @@
-# 2d-game-js
-youtubetutorial nachbauen
+Erstelle ein 2D Game mit Javascript
